@@ -24,10 +24,3 @@ jobs:
       with:
         client_id: ${{ secrets.AZURE_CLIENT_ID }}
         tenant_id: ${{ secrets.AZURE_TENANT_ID }}
-
-    - name: Archive Maester Html Report
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: maester-test-results-${{ env.NOW }}
-        path: test-results
