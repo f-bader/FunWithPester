@@ -24,8 +24,6 @@ jobs:
       with:
         client_id: ${{ secrets.AZURE_CLIENT_ID }}
         tenant_id: ${{ secrets.AZURE_TENANT_ID }}
-        include_tags: "MT.1021,MT.1024"
-        exclude_tags: "MT.1022"
         pester_verbosity: Detailed
         mail_recipients: cloudadmin@c4a8korriban.onmicrosoft.com
         mail_userid: bc7b9710-54c2-4112-9b2e-cbf8bbb50b23
