@@ -19,9 +19,13 @@ jobs:
     name: Run Maester Tests
     runs-on: ubuntu-latest
     steps:
-    - name: Run Maester action
-      uses: maester365/maester@main
+    - name: Run Maester 🔥
+      uses: maester365/maester-action@v1.0.1 # to this line
       with:
+        # your parameters here
+        include_private_tests: true # this will checkout the current repository and was the default behavior of the old action
+        # if you used install_prerelease: true you should add this line and remove the old one
+        maester_version: preview # pick the exact version of the Maester module you want to use or 'latest' or 'preview'
         client_id: ${{ secrets.AZURE_CLIENT_ID }}
         tenant_id: ${{ secrets.AZURE_TENANT_ID }}
         pester_verbosity: Detailed
